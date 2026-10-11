@@ -8,7 +8,7 @@ export const Route = createFileRoute("/how-it-works")({
     meta: [
       { title: "How it works — PonderSonder" },
       { name: "description", content: "Camera, on-device AI, spatial audio. No cloud. Works in airplane mode." },
-      { property: "og:title", content: "How it works — PonderSonder" },
+      { property: "og:title", content: "On Device AI" },
       { property: "og:description", content: "Sound becomes sight. Camera to spatial audio in 250ms, fully on-device." },
     ],
   }),
@@ -16,9 +16,9 @@ export const Route = createFileRoute("/how-it-works")({
 });
 
 const steps = [
-  { Icon: Camera, n: "01", t: "Camera", d: "Wear your phone on a chest mount. Its camera scans the path ahead and detects obstacles, turns, and boundaries in real time." },
-  { Icon: Brain, n: "02", t: "The app sends audio and haptic signals through headphones, so you still hear traffic and your surroundings." },
-  { Icon: Headphones, n: "03", t: "Spatial audio", d: "Follow clear, instant signals and run your route without relying on a guide for every workout." },
+  { Icon: Camera, n: "01", t: "Camera", d: "Works in 15 FPS" },
+  { Icon: Brain, n: "02", t: "Computes everything locally, no data collected" },
+  { Icon: Headphones, n: "03", t: "Spatial audio", d: "8D like audio signals to guide you." },
 ];
 
 function Bars({ count, dur, width, h }: { count: number; dur: number; width: string; h: string }) {
