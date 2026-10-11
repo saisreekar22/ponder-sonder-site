@@ -15,10 +15,10 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Sai Sreekar Vankayalapati", img: "sai", bio: "Obsessed with edge-compute and making AI run on $100 phones." },
-  { name: "Reya", img: "reya", bio: "Focuses on the intersection of accessibility and human-centered audio design." },
-  { name: "Kiara", img: "kiara", bio: "Maps the gap between what technology can do and what athletes actually need." },
-  { name: "Kavya", img: "kavya", bio: "Makes sure our privacy architecture is as tight as our detection models." },
+  { name: "Reya", img: "reya", bio: "Team Lead | Project Manager" },
+  { name: "Sai Sreekar Vankayalapati", img: "sai", bio: "Coder | Mentor Liaison" },
+  { name: "Kavya", img: "kavya", bio: "Entrepreneur | Community Advocate | Pitch Specialist" },
+  { name: "Kiara", img: "kiara", bio: "Researcher | Designer | Content Creator" },
 ];
 
 function Avatar({ name, img }: { name: string; img: string }) {
