@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Accessibility, Dog, Smartphone } from "lucide-react";
+import { Accessibility, ArrowRight, Dog, Smartphone } from "lucide-react";
 import hero from "@/assets/hero-runner.jpg";
 import caneImg from "@/assets/gap-cane.jpg";
 import dogImg from "@/assets/gap-dog.jpg";
@@ -45,6 +45,12 @@ const gap = [
   { Icon: Accessibility, label: "White cane", text: "Finds the curb. Misses the cyclist.", hi: false, img: caneImg },
   { Icon: Dog, label: "Guide dog", text: "Life-changing. But $40k and a waitlist.", hi: false, img: dogImg },
   { Icon: Smartphone, label: "Phone apps", text: "Point. Tap. Wait. Too slow for a sprint.", hi: true, img: phoneImg },
+];
+
+const hears = [
+  ["A person ahead", "a soft blip"],
+  ["A car pulling up", "a low hum"],
+  ["Something on your left", "your left ear"],
 ];
 
 const values = [
