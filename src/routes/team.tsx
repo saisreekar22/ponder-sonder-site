@@ -16,7 +16,7 @@ export const Route = createFileRoute("/team")({
 
 const team = [
   { name: "Reya", img: "reya", bio: "Team Lead | Project Manager" },
-  { name: "Sai Sreekar Vankayalapati", img: "sai", bio: "Coder | Mentor Liaison" },
+  { name: "Sai Sreekar Vankayalapati", img: "dp3", bio: "Coder | Mentor Liaison" },
   { name: "Kavya", img: "kavya", bio: "Entrepreneur | Community Advocate | Pitch Specialist" },
   { name: "Kiara", img: "kiara", bio: "Researcher | Designer | Content Creator" },
 ];
@@ -25,7 +25,7 @@ function Avatar({ name, img }: { name: string; img: string }) {
   const [err, setErr] = useState(false);
   return (
     <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-primary bg-muted font-display text-3xl text-primary">
-      {err ? name[0] : <img src={`/assets/${img}.jpg`} alt={`Portrait of ${name}`} onError={() => setErr(true)} className="h-full w-full object-cover" />}
+      {err ? name[0] : <img src={`/assets/dps/${img}.jpg`} alt={`Portrait of ${name}`} onError={() => setErr(true)} className="h-full w-full object-cover" />}
     </div>
   );
 }

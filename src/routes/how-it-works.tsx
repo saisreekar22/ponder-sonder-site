@@ -91,6 +91,9 @@ function How() {
           <Reveal delay={150}><Demo src="/assets/prototype-2.gif" alt="EchoPath audio guidance panning left to right" /></Reveal>
         </div>
         <p className="mt-6 text-sm text-muted-foreground">Live capture from our Android test device. Audio cues visualized.</p>
+        <a href="https://saisreekar22.github.io/Sonder" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-primary underline-offset-8 hover:underline">
+          Try the live prototype <ArrowRight aria-hidden size={16} />
+        </a>
       </section>
     </Shell>
   );

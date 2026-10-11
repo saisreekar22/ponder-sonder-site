@@ -111,7 +111,7 @@ function Home() {
         <Reveal><h2 id="answer" className="max-w-4xl font-display text-5xl md:text-7xl">An app, <em className="text-primary">and the phone already in your pocket.</em></h2></Reveal>
         <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-20">
           <div className="max-w-xl space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <Reveal><p>PonderSonder is a free app. Open it, put your headphones in, start running. The phone's camera watches the path ahead of you and turns everything it notices into a simple sound in your ears.</p></Reveal>
+            <Reveal><p>EchoPath is a free app. Open it, put your headphones in, start running. The phone's camera watches the path ahead of you and turns everything it notices into a simple sound in your ears.</p></Reveal>
             <Reveal delay={100}><p className="text-foreground">Nothing to tap, nothing to read. You listen, and you keep moving.</p></Reveal>
             <Reveal delay={200}><p>All of it happens on your phone — no internet needed, nothing recorded, nothing sent anywhere. It stays free, and it never replaces the cane. It just clears the path.</p></Reveal>
           </div>
