@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Accessibility, Dog, Smartphone } from "lucide-react";
 import hero from "@/assets/hero-runner.jpg";
+import caneImg from "@/assets/gap-cane.jpg";
+import dogImg from "@/assets/gap-dog.jpg";
+import phoneImg from "@/assets/gap-phone.jpg";
 import { Reveal, Shell, useInView } from "@/components/site";
 
 export const Route = createFileRoute("/")({
@@ -39,9 +42,9 @@ function Counter() {
 }
 
 const gap = [
-  { Icon: Accessibility, label: "White cane", text: "Finds the curb. Misses the cyclist.", hi: false },
-  { Icon: Dog, label: "Guide dog", text: "Life-changing. But $40k and a waitlist.", hi: false },
-  { Icon: Smartphone, label: "Phone apps", text: "Point. Tap. Wait. Too slow for a sprint.", hi: true },
+  { Icon: Accessibility, label: "White cane", text: "Finds the curb. Misses the cyclist.", hi: false, img: caneImg },
+  { Icon: Dog, label: "Guide dog", text: "Life-changing. But $40k and a waitlist.", hi: false, img: dogImg },
+  { Icon: Smartphone, label: "Phone apps", text: "Point. Tap. Wait. Too slow for a sprint.", hi: true, img: phoneImg },
 ];
 
 const values = [
@@ -68,14 +71,26 @@ function Home() {
         </div>
       </section>
 
+      <section aria-labelledby="reality" className="px-6 py-40 md:px-16">
+        <Reveal><p className="mb-8 text-sm uppercase tracking-[0.3em] text-muted-foreground">The reality</p></Reveal>
+        <Reveal><h2 id="reality" className="max-w-5xl font-display text-6xl md:text-8xl">Independence shouldn't require a <em className="text-primary">chaperone.</em></h2></Reveal>
+        <div className="mt-16 max-w-xl space-y-8 text-lg leading-relaxed text-muted-foreground">
+          <Reveal><p>For blind and visually impaired athletes, a morning run isn't just a workout—it's a logistical puzzle.</p></Reveal>
+          <Reveal delay={100}><p>White canes only detect the curb after you've stumbled. Guide dogs are life-changing, but cost $40,000 and have years-long waitlists. Sighted guides are incredible, but relying on someone else's schedule kills autonomy.</p></Reveal>
+          <Reveal delay={200}><p className="text-foreground">We believe the freedom to run shouldn't depend on who is available to hold the tether.</p></Reveal>
+        </div>
+      </section>
+
       <section aria-labelledby="gap" className="px-6 py-32 md:px-16">
         <Reveal><h2 id="gap" className="mb-16 text-sm uppercase tracking-[0.3em] text-muted-foreground">The gap</h2></Reveal>
         <div className="grid gap-4 md:grid-cols-3 md:grid-rows-2">
-          {gap.map(({ Icon, label, text, hi }, i) => (
+          {gap.map(({ Icon, label, text, hi, img }, i) => (
             <Reveal key={label} delay={i * 120} className={i === 0 ? "md:row-span-2" : i === 2 ? "md:col-span-2" : ""}>
-              <article className={`flex h-full min-h-64 flex-col justify-between rounded-3xl border bg-card p-8 transition-transform duration-500 hover:-translate-y-1 ${hi ? "border-primary" : "border-border"}`}>
-                <Icon aria-hidden className={hi ? "text-primary" : "text-muted-foreground"} size={36} strokeWidth={1.25} />
-                <div>
+              <article className={`relative flex h-full min-h-64 flex-col justify-between overflow-hidden rounded-3xl border bg-card p-8 transition-transform duration-500 hover:-translate-y-1 ${hi ? "border-primary" : "border-border"}`}>
+                <img src={img} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-background/70" />
+                <Icon aria-hidden className={`relative ${hi ? "text-primary" : "text-muted-foreground"}`} size={36} strokeWidth={1.25} />
+                <div className="relative">
                   <p className="mb-2 text-xs uppercase tracking-widest text-muted-foreground">{label}</p>
                   <p className="font-display text-4xl md:text-5xl">{text}</p>
                 </div>
