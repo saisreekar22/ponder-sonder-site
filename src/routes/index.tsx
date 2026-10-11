@@ -115,7 +115,7 @@ function Home() {
             <Reveal delay={100}><p className="text-foreground">Nothing to tap, nothing to read. You listen, and you keep moving.</p></Reveal>
             <Reveal delay={200}><p>All of it happens on your phone — no internet needed, nothing recorded, nothing sent anywhere. It stays free, and it never replaces the cane. It just clears the path.</p></Reveal>
           </div>
-          <Reveal delay={150}>
+          <Reveal delay={150} className="md:self-center">
             <ul className="glass divide-y divide-border overflow-hidden rounded-3xl border border-border">
               {hears.map(([saw, heard]) => (
                 <li key={saw} className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 p-6">
