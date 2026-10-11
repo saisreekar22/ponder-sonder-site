@@ -16,9 +16,9 @@ export const Route = createFileRoute("/how-it-works")({
 });
 
 const steps = [
-  { Icon: Camera, n: "01", t: "Camera", d: "15 FPS." },
-  { Icon: Brain, n: "02", t: "On-device AI", d: "No cloud. Airplane mode ready." },
-  { Icon: Headphones, n: "03", t: "Spatial audio", d: "Left ear = hazard left." },
+  { Icon: Camera, n: "01", t: "Camera", d: "Wear your phone on a chest mount. Its camera scans the path ahead and detects obstacles, turns, and boundaries in real time." },
+  { Icon: Brain, n: "02", t: "The app sends audio and haptic signals through headphones, so you still hear traffic and your surroundings." },
+  { Icon: Headphones, n: "03", t: "Spatial audio", d: "Follow clear, instant signals and run your route without relying on a guide for every workout." },
 ];
 
 function Bars({ count, dur, width, h }: { count: number; dur: number; width: string; h: string }) {
