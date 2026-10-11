@@ -15,7 +15,7 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Sai Sreekar Vankayalapati", img: "sreekar", bio: "Obsessed with edge-compute and making AI run on $100 phones." },
+  { name: "Sai Sreekar Vankayalapati", img: "sai", bio: "Obsessed with edge-compute and making AI run on $100 phones." },
   { name: "Reya", img: "reya", bio: "Focuses on the intersection of accessibility and human-centered audio design." },
   { name: "Kiara", img: "kiara", bio: "Maps the gap between what technology can do and what athletes actually need." },
   { name: "Kavya", img: "kavya", bio: "Makes sure our privacy architecture is as tight as our detection models." },

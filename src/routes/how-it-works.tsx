@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Brain, Camera, Headphones, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Brain, Camera, Headphones, ArrowRight, Film } from "lucide-react";
 import { Reveal, Shell } from "@/components/site";
 
 export const Route = createFileRoute("/how-it-works")({
@@ -77,12 +78,37 @@ function How() {
         </Reveal>
       </section>
 
-      <section className="px-6 pb-40 md:px-16">
+      <section className="px-6 pb-24 md:px-16">
         <p className="mx-auto max-w-md text-center text-sm text-muted-foreground">
           All processing happens on the device. Zero frames leave the phone. Works in airplane mode.
         </p>
       </section>
+
+      <section aria-labelledby="demo" className="px-6 pb-40 md:px-16">
+        <Reveal><h2 id="demo" className="mb-12 font-display text-6xl md:text-8xl">See it in <em className="text-primary">action.</em></h2></Reveal>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Reveal><Demo src="/assets/prototype-1.gif" alt="EchoPath tracking a person walking across the room" /></Reveal>
+          <Reveal delay={150}><Demo src="/assets/prototype-2.gif" alt="EchoPath audio guidance panning left to right" /></Reveal>
+        </div>
+        <p className="mt-6 text-sm text-muted-foreground">Live capture from our Android test device. Audio cues visualized.</p>
+      </section>
     </Shell>
+  );
+}
+
+function Demo({ src, alt }: { src: string; alt: string }) {
+  const [err, setErr] = useState(false);
+  return (
+    <div className="glass flex aspect-video items-center justify-center overflow-hidden rounded-3xl border border-border bg-muted">
+      {err ? (
+        <div role="img" aria-label={`${alt} (coming soon)`} className="flex flex-col items-center gap-3 text-muted-foreground">
+          <Film aria-hidden size={36} strokeWidth={1.25} />
+          <span className="text-xs uppercase tracking-widest">Demo coming soon</span>
+        </div>
+      ) : (
+        <img src={src} alt={alt} loading="lazy" onError={() => setErr(true)} className="h-full w-full object-cover" />
+      )}
+    </div>
   );
 }
 
