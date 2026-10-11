@@ -106,6 +106,33 @@ function Home() {
         </div>
       </section>
 
+      <section aria-labelledby="answer" className="px-6 py-32 md:px-16">
+        <Reveal><p className="mb-8 text-sm uppercase tracking-[0.3em] text-muted-foreground">The answer</p></Reveal>
+        <Reveal><h2 id="answer" className="max-w-4xl font-display text-5xl md:text-7xl">An app, <em className="text-primary">and the phone already in your pocket.</em></h2></Reveal>
+        <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-20">
+          <div className="max-w-xl space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <Reveal><p>PonderSonder is a free app. Open it, put your headphones in, start running. The phone's camera watches the path ahead of you and turns everything it notices into a simple sound in your ears.</p></Reveal>
+            <Reveal delay={100}><p className="text-foreground">Nothing to tap, nothing to read. You listen, and you keep moving.</p></Reveal>
+            <Reveal delay={200}><p>All of it happens on your phone — no internet needed, nothing recorded, nothing sent anywhere. It stays free, and it never replaces the cane. It just clears the path.</p></Reveal>
+          </div>
+          <Reveal delay={150}>
+            <ul className="glass divide-y divide-border overflow-hidden rounded-3xl border border-border">
+              {hears.map(([saw, heard]) => (
+                <li key={saw} className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 p-6">
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground">{saw}</span>
+                  <span className="font-display text-2xl text-primary md:text-3xl">{heard}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+        <Reveal delay={250}>
+          <Link to="/how-it-works" className="mt-12 inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-primary underline-offset-8 hover:underline">
+            See how it works <ArrowRight aria-hidden size={16} />
+          </Link>
+        </Reveal>
+      </section>
+
       <section aria-labelledby="shift" className="relative h-[180vh] px-6 md:px-16">
         <div className="sticky top-0 flex min-h-screen flex-col justify-center gap-8 md:flex-row md:items-center md:gap-16">
           <Counter />
